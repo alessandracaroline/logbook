@@ -1,9 +1,11 @@
 class CreateLogs < ActiveRecord::Migration
   def change
     create_table :logs do |t|
-      t.string :start_location
-      t.string :end_location
-      t.integer :see_miles
+      t.string :latitude
+      t.string :longitude
+      t.integer :sea_miles
+      t.integer :wind_knots
+      t.integer :current_speed
       t.string :incidents
 
       t.references :trip
