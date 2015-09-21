@@ -1,0 +1,11 @@
+<div class='container'>
+  <% Trip.all.each do |trip| %>
+    <p> <%= trip.title %> </p>
+    <p>
+      <%= trip.start_date %>
+      -
+      <%= trip.end_date %>
+
+    </p>
+  <% end %>
+</div>
