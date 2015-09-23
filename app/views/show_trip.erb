@@ -1,0 +1,23 @@
+<!-- TRIP INFORMATION -->
+
+<% @logs.each do |log| %>
+  <h2><a href='/trips/<%=@trip.id%>/logs/<%= log.id %>'>
+    <span class="coordinates">
+    <%= log.coordinate.latitude %>
+    <%= log.coordinate.latitude_degrees %>
+    &deg;
+    <%= log.coordinate.latitude_minutes %>
+    '
+    <%= log.coordinate.latitude_seconds %>
+    "
+
+    <%= log.coordinate.longitude %>
+    <%= log.coordinate.longitude_degrees %>
+    &deg;
+    <%= log.coordinate.longitude_minutes %>
+    '
+    <%= log.coordinate.longitude_seconds %>
+    "
+    </span>
+  </a></h2>
+<% end %>

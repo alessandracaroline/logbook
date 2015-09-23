@@ -1,9 +1,22 @@
+img.large {
+  width: 100%;
+  min-height: 30em;
+  max-height: 50em;
+  display: block;
+  clear: both;
+}
+
 .container {
   margin: 20px auto;
   width: 600px;
   padding: 0px 20px 20px 20px;
   border: 1px dotted black;
 }
+
 th {
   text-align: left;
+}
+
+.coordinates {
+  margin: 0 0.5em 0 0.5em;
 }

@@ -4,5 +4,11 @@ get '/' do
 end
 
 get '/trips' do
-  erb :show_trips
+  erb :trips_index
+end
+
+get '/trips/:trip_id/logs' do
+  @trip = Trip.where(id: params[:trip_id]).first
+  @logs = @trip.logs
+  erb :show_trip
 end

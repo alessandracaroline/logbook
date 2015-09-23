@@ -1,0 +1,11 @@
+<header><img src="images/sailing_1.jpg" alt="cover" class="large"></header>
+<div class='container'>
+  <% Trip.all.each do |trip| %>
+    <h2><a href='/trips/<%=trip.id%>/logs'> <%= trip.title %> </a></h2>
+    <p class="dates">
+      <%= trip.start_date.strftime("%F") %>
+    &ndash;
+      <%= trip.end_date.strftime("%F") %>
+    </p>
+  <% end %>
+</div>
