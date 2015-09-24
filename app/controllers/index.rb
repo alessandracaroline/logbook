@@ -12,3 +12,9 @@ get '/trips/:trip_id/logs' do
   @logs = @trip.logs
   erb :show_trip
 end
+
+get '/trips/:trip_id/logs/:log_id' do
+  @trip = Trip.where(id: params[:trip_id]).first
+  @log = Log.where(id: params[:log_id]).first
+  erb :show_log
+end

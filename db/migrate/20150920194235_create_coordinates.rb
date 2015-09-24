@@ -9,6 +9,8 @@ class CreateCoordinates < ActiveRecord::Migration
       t.integer :longitude_degrees
       t.integer :longitude_minutes
       t.integer :longitude_seconds
+
+      t.timestamps
     end
   end
 end

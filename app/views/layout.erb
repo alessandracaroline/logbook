@@ -12,12 +12,16 @@
   -->
   <link rel="stylesheet" href="/css/application.css">
   <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="http://webapiv2.navionics.com/dist/webapi/webapi.min.css" >
+  <script type="text/javascript" src="http://webapiv2.navionics.com/dist/webapi/webapi.min.no-dep.js"></script>
+
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
 
   <title></title>
 </head>
-<body>
+<body data-root="http://webapiv2.navionics.com/dist/webapi/images">
   <%= yield %>
 </body>
 </html>

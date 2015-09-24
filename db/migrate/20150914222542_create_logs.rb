@@ -9,6 +9,8 @@ class CreateLogs < ActiveRecord::Migration
 
       t.references :trip
       t.references :coordinate
+
+      t.timestamps
     end
   end
 end

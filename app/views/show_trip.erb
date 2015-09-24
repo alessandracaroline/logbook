@@ -1,5 +1,15 @@
 <!-- TRIP INFORMATION -->
 
+<h1><%= @trip.title %></h1>
+<h3>
+  <p class="dates">
+    <%= @trip.start_date.strftime("%F") %>
+    &ndash;
+    <%= @trip.end_date.strftime("%F") %>
+  </p>
+</h3>
+
+<!-- Show list of logs for trip -->
 <% @logs.each do |log| %>
   <h2><a href='/trips/<%=@trip.id%>/logs/<%= log.id %>'>
     <span class="coordinates">

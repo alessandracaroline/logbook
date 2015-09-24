@@ -11,6 +11,8 @@ class CreateTrips < ActiveRecord::Migration
       t.string :origin
       t.string :destination
       t.string :remarks
+
+      t.timestamps
     end
   end
 end
