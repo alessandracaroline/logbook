@@ -13,20 +13,20 @@
 <% @logs.each do |log| %>
   <h2><a href='/trips/<%=@trip.id%>/logs/<%= log.id %>'>
     <span class="coordinates">
-    <%= log.coordinate.latitude %>
-    <%= log.coordinate.latitude_degrees %>
+    <%= log.latitude_hemisphere %>
+    <%= log.latitude_degrees %>
     &deg;
-    <%= log.coordinate.latitude_minutes %>
+    <%= log.latitude_minutes %>
     '
-    <%= log.coordinate.latitude_seconds %>
+    <%= log.latitude_seconds %>
     "
 
-    <%= log.coordinate.longitude %>
-    <%= log.coordinate.longitude_degrees %>
+    <%= log.longitude_hemisphere %>
+    <%= log.longitude_degrees %>
     &deg;
-    <%= log.coordinate.longitude_minutes %>
+    <%= log.longitude_minutes %>
     '
-    <%= log.coordinate.longitude_seconds %>
+    <%= log.longitude_seconds %>
     "
     </span>
   </a></h2>
