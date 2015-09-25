@@ -1,3 +1,13 @@
+* {
+  font-family: 'Merriweather', serif;
+  font-weight: 300;
+  color: #47494d;
+}
+
+main {
+  margin: 0 1.5em 0 1.5em;
+}
+
 img.large {
   width: 100%;
   min-height: 30em;

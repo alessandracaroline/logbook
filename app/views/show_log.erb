@@ -1,3 +1,4 @@
+<main>
 <h1><span class="coordinates">
     <%= @log.latitude_hemisphere %>
     <%= @log.latitude_degrees %>
@@ -15,5 +16,7 @@
     <%= @log.longitude_seconds %>
     "
 </span></h1>
+</main>
 
 <%= erb :'map', layout: false, locals: {log: @log} %>
+

@@ -1,3 +1,5 @@
+
+<main>
 <!-- TRIP INFORMATION -->
 
 <h1><%= @trip.title %></h1>
@@ -8,6 +10,7 @@
     <%= @trip.end_date.strftime("%F") %>
   </p>
 </h3>
+
 
 <!-- Show list of logs for trip -->
 <% @logs.each do |log| %>
@@ -31,3 +34,4 @@
     </span>
   </a></h2>
 <% end %>
+</main>
