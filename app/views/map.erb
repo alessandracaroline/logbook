@@ -25,9 +25,17 @@
 
 var map;
 function initMap() {
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 40.133, lng: 9.3543},
-    zoom: 8
+  var myLatLng = {lat: <%= log.latitude %>, lng: <%= log.longitude %>};
+
+  var map = new google.maps.Map(document.getElementById('map'), {
+    center: myLatLng,
+    zoom: 10
+  });
+
+  var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    title: 'Your log!'
   });
 }
 
