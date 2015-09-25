@@ -1,0 +1,37 @@
+<main>
+<form id="new_log" method="POST" action="/trips/<%=@trip.id%>/logs">
+  <select name="log[latitude_hemisphere]">
+    <option value="N">N</option>
+    <option value="S">S</option>
+  </select>
+  <input name='log[latitude_degrees]' type='number'>
+  &deg;
+  <input name='log[latitude_degrees]' type='number'>
+  '
+  <input name='log[latitude_degrees]' type='number'>
+  "
+  <br>
+  <select name="log[longitude_hemisphere]">
+    <option value="E">E</option>
+    <option value="W">W</option>
+  </select>
+  <input name='log[longitude_degrees]' type='number'>
+  &deg;
+  <input name='log[longitude_degrees]' type='number'>
+  '
+  <input name='log[longitude_degrees]' type='number'>
+  "
+  <br>
+  <label for='log[nautical_mile]'>Nautical Miles since last log (nm):</label>
+  <input name='log[nautical_mile]' type='number' placeholder='nm'>
+  <label for='log[wind_knots]'>Wind knots:</label>
+  <input name='log[wind_knots]' type='number'>
+  <label for='log[current_speed]'>Current speed:</label>
+  <input name='log[current_speed]' type='number'>
+  <label for='log[weather]'>Weather:</label>
+  <input name='log[weather]' type='text'>
+  <label for='log[incidents]'>Incidents:</label>
+  <textarea name='log[incidents]' type='text'></textarea>
+  <input type='submit' name='submit' value='Add log'>
+</form>
+</main>

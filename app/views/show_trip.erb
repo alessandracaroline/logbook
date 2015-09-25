@@ -10,15 +10,17 @@
     <%= @trip.end_date.strftime("%F") %>
   </p>
 </h3>
+<h3>
+  <p>
+    Origin: <%= @trip.origin %>,
+    Destination: <%= @trip.destination %>
+  </p>
+</h3>
 <p>Skipper: <%= @trip.skipper_name %> </p>
 <p>Crew: <%= @trip.crew_name %> </p>
 <p>
   Boat: <%= @trip.boat_name %>,
   Type: <%= @trip.boat_type %>
-</p>
-<p>
-  Origin: <%= @trip.origin %>,
-  Destination: <%= @trip.destination %>
 </p>
 <p>Remarks: <%= @trip.remarks %> </p>
 
@@ -48,9 +50,7 @@
   <% end %>
 </div>
 
-<h2>Add a new log</h2>
-<form id="new_log" method="POST" action="/trips/<%=@trip.id%>/logs">
+<h2><a href='/trips/<%=@trip.id%>/logs/new'>Add a new log</a></h2>
 
-</form>
 
 </main>

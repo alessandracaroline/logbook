@@ -13,6 +13,15 @@ get '/trips/:trip_id/logs' do
   erb :show_trip
 end
 
+get '/trips/:trip_id/logs/new' do
+  @trip = Trip.where(id: params[:trip_id]).first
+  erb :'/logs/new'
+end
+
+post '/trips/:trip_id/logs' do
+
+end
+
 get '/trips/:trip_id/logs/:log_id' do
   @trip = Trip.where(id: params[:trip_id]).first
   @log = Log.where(id: params[:log_id]).first
