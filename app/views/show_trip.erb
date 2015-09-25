@@ -10,28 +10,41 @@
     <%= @trip.end_date.strftime("%F") %>
   </p>
 </h3>
-
+<p>Skipper: <%= @trip.skipper_name %> </p>
+<p>Crew: <%= @trip.crew_name %> </p>
+<p>
+  Boat: <%= @trip.boat_name %>,
+  Type: <%= @trip.boat_type %>
+</p>
+<p>
+  Origin: <%= @trip.origin %>,
+  Destination: <%= @trip.destination %>
+</p>
+<p>Remarks: <%= @trip.remarks %> </p>
 
 <!-- Show list of logs for trip -->
-<% @logs.each do |log| %>
-  <h2><a href='/trips/<%=@trip.id%>/logs/<%= log.id %>'>
-    <span class="coordinates">
-    <%= log.latitude_hemisphere %>
-    <%= log.latitude_degrees %>
-    &deg;
-    <%= log.latitude_minutes %>
-    '
-    <%= log.latitude_seconds %>
-    "
+<div class="logs">
+  <h2>All logs for this trip</h2>
+  <% @logs.each do |log| %>
+    <h2><a href='/trips/<%=@trip.id%>/logs/<%= log.id %>'>
+      <span class="coordinates">
+      <%= log.latitude_hemisphere %>
+      <%= log.latitude_degrees %>
+      &deg;
+      <%= log.latitude_minutes %>
+      '
+      <%= log.latitude_seconds %>
+      "
 
-    <%= log.longitude_hemisphere %>
-    <%= log.longitude_degrees %>
-    &deg;
-    <%= log.longitude_minutes %>
-    '
-    <%= log.longitude_seconds %>
-    "
-    </span>
-  </a></h2>
-<% end %>
+      <%= log.longitude_hemisphere %>
+      <%= log.longitude_degrees %>
+      &deg;
+      <%= log.longitude_minutes %>
+      '
+      <%= log.longitude_seconds %>
+      "
+      </span>
+    </a></h2>
+  <% end %>
+</div>
 </main>
